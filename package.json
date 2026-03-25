@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test" : "npx playwright test",
+    "test:ui" : "npx playwright test --ui",
+    "test:report": "npx playwright test && npx playwright show-report",
+    "test:regression": "npx playwright test --grep @regression"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sandewdinowanya/playwright-typescript.git"
