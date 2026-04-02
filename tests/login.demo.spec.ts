@@ -12,6 +12,6 @@ test('login test', async ({ page} )=>{
     await password.fill('secret_sauce');
     await loginButton.click();
 
-    
+    expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
 })
