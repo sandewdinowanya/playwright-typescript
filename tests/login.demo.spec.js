@@ -4,9 +4,11 @@ test('login test', async ({ page} )=>{
 
     await page.goto('https://www.saucedemo.com/');
     
-    const username: Locator = page.locator('#user-name');  // why here use locators instead of String 
-    const password: Locator = page.locator('#password');
-    const loginButton: Locator = page.locator('#login-button');
+    const username = page.locator('#user-name');  // why here use locators instead of String 
+    const password = page.locator('#password');
+    const loginButton = page.locator('#login-button');
+
+    // username.goto(''); 
 
     await username.fill('standard_user');
     await password.fill('secret_sauce');
@@ -14,6 +16,6 @@ test('login test', async ({ page} )=>{
 
     expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
-    const title: Locator = page.locator('.title');
+    const title = page.locator('.title');
     await expect(title).toHaveText('Products');
 })
