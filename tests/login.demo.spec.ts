@@ -14,6 +14,8 @@ test('login test', async ({ page} )=>{
 
     expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
+    // page.randommethod('')// in typescript given an error when using non existing methods in page object 
+
     const title: Locator = page.locator('.title');
     await expect(title).toHaveText('Products');
 })
