@@ -7,7 +7,7 @@ test('login test', async ({ page} )=>{
     const username = page.locator('#user-name');  // why here use locators instead of String 
     const password = page.locator('#password');
     const loginButton = page.locator('#login-button');
-    const loginButton = page.locator('#login-button');
+    // const loginButton = page.locator('#login-button');
 
     // username.goto(''); 
     page.randommethod('')// not given an error in using non existing method in page object 
