@@ -10,7 +10,6 @@ test('login test', async ({ page} )=>{
     // const loginButton = page.locator('#login-button');
 
     // username.goto(''); 
-    page.randommethod('')// not given an error in using non existing method in page object 
 
     await username.fill('standard_user');
     await password.fill('secret_sauce');
